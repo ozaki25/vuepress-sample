@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-sample",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "vuepress": "^0.5.0"
+  },
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "ozaki25",
+  "license": "MIT"
+}

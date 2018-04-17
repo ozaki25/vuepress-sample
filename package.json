@@ -2,8 +2,8 @@
   "name": "vuepress-sample",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "vuepress": "^0.5.0"
+  "devDependencies": {
+    "vuepress": "0.5.1"
   },
   "scripts": {
     "start": "vuepress dev docs",

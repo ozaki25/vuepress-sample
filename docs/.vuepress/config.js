@@ -1,4 +1,5 @@
 module.exports = {
   title: "React & React Native",
-  serviceWorker: true
+  serviceWorker: true,
+  base: 'vuepress-sample'
 };

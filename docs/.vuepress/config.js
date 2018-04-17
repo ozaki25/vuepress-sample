@@ -1,3 +1,4 @@
 module.exports = {
-  title: "React & React Native"
+  title: "React & React Native",
+  serviceWorker: true
 };

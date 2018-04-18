@@ -1,7 +1,36 @@
 {
     "name"              : "React & React Native",
     "short_name"        : "React & React Native",
-    "start_url"         : "/",
+    "start_url"         : "/vuepress-sample/",
     "display"           : "standalone",
-    "orientation"       : "any"
+    "orientation"       : "any",
+    "background_color"  : "#f5fcff",
+    "theme_color"       : "#222222",
+    "icons": [
+          {
+        "src"           : "/img/icon/icon_072.png",
+        "sizes"         : "72x72",
+        "type"          : "image/png"
+      },
+          {
+        "src"           : "/img/icon/icon_152.png",
+        "sizes"         : "152x152",
+        "type"          : "image/png"
+      },
+          {
+        "src"           : "/img/icon/icon_192.png",
+        "sizes"         : "192x192",
+        "type"          : "image/png"
+      },
+          {
+        "src"           : "/img/icon/icon_256.png",
+        "sizes"         : "256x256",
+        "type"          : "image/png"
+      },
+          {
+        "src"           : "/img/icon/icon_512.png",
+        "sizes"         : "512x512",
+        "type"          : "image/png"
+      }
+      ]
   }

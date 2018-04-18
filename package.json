@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "cd docs/.vuepress/dist && git init && git add -A && git commit -m 'deploy' && git push -f git@github.com:ozaki25/vuepress-sample.git master:gh-pages"
   },
   "author": "ozaki25",
   "license": "MIT"

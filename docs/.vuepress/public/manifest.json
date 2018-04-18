@@ -1,0 +1,7 @@
+{
+    "name"              : "React & React Native",
+    "short_name"        : "React & React Native",
+    "start_url"         : "/",
+    "display"           : "standalone",
+    "orientation"       : "any"
+  }

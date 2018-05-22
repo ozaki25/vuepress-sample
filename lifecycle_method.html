@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>React &amp; React Native | コンポーネントのライフサイクルメソッド</title>
+    <link rel="manifest" href="/vuepress-sample/manifest.json">
+    
+    <link rel="preload" href="/vuepress-sample/assets/css/23.styles.319dd7df.css" as="style"><link rel="preload" href="/vuepress-sample/assets/js/app.76c236ad.js" as="script"><link rel="preload" href="/vuepress-sample/assets/js/10.7115ee24.js" as="script"><link rel="prefetch" href="/vuepress-sample/assets/js/12.18d60ab0.js"><link rel="prefetch" href="/vuepress-sample/assets/js/1.92eab7e9.js"><link rel="prefetch" href="/vuepress-sample/assets/js/2.2d227060.js"><link rel="prefetch" href="/vuepress-sample/assets/js/3.fb11b3b4.js"><link rel="prefetch" href="/vuepress-sample/assets/js/4.632a1d2a.js"><link rel="prefetch" href="/vuepress-sample/assets/js/5.8ba1f74f.js"><link rel="prefetch" href="/vuepress-sample/assets/js/6.f84c4c59.js"><link rel="prefetch" href="/vuepress-sample/assets/js/7.4479f1ff.js"><link rel="prefetch" href="/vuepress-sample/assets/js/8.4a0b3ce7.js"><link rel="prefetch" href="/vuepress-sample/assets/js/9.0e32fff7.js"><link rel="prefetch" href="/vuepress-sample/assets/js/11.fa121254.js"><link rel="prefetch" href="/vuepress-sample/assets/js/0.027335a9.js"><link rel="prefetch" href="/vuepress-sample/assets/js/13.bb55bc28.js"><link rel="prefetch" href="/vuepress-sample/assets/js/14.76254adc.js"><link rel="prefetch" href="/vuepress-sample/assets/js/15.f8de649f.js"><link rel="prefetch" href="/vuepress-sample/assets/js/16.01623933.js"><link rel="prefetch" href="/vuepress-sample/assets/js/17.23159fa9.js"><link rel="prefetch" href="/vuepress-sample/assets/js/18.3609d98c.js"><link rel="prefetch" href="/vuepress-sample/assets/js/19.cbd9191c.js"><link rel="prefetch" href="/vuepress-sample/assets/js/20.87b7c9f5.js"><link rel="prefetch" href="/vuepress-sample/assets/js/21.f73a6a84.js"><link rel="prefetch" href="/vuepress-sample/assets/js/22.093afe59.js">
+    <link rel="stylesheet" href="/vuepress-sample/assets/css/23.styles.319dd7df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/vuepress-sample/" class="router-link-active"><!----><span class="site-name">
+      React &amp; React Native
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar"><!----><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>React/ReactNative概要</span><span class="arrow up"></span></p><ul class="sidebar-group-items"><li><a href="/vuepress-sample/react_native.html" class="sidebar-link">ReactNativeとReact</a></li><li><a href="/vuepress-sample/jsx.html" class="sidebar-link">JSX</a></li><li><a href="/vuepress-sample/create_component.html" class="sidebar-link">Reactのコンポーネント</a></li><li><a href="/vuepress-sample/lifecycle_method.html" class="active sidebar-link">コンポーネントのライフサイクルメソッド</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-sample/lifecycle_method.html#ゴール" class="sidebar-link">ゴール</a></li><li class="sidebar-sub-header"><a href="/vuepress-sample/lifecycle_method.html#ライフサイクルメソッドとは" class="sidebar-link">ライフサイクルメソッドとは</a></li><li class="sidebar-sub-header"><a href="/vuepress-sample/lifecycle_method.html#ライフサイクルメソッドの種類" class="sidebar-link">ライフサイクルメソッドの種類</a></li><li class="sidebar-sub-header"><a href="/vuepress-sample/lifecycle_method.html#主なライフサイクルメソッド" class="sidebar-link">主なライフサイクルメソッド</a></li><li class="sidebar-sub-header"><a href="/vuepress-sample/lifecycle_method.html#まとめ" class="sidebar-link">まとめ</a></li></ul></li><li><a href="/vuepress-sample/state.html" class="sidebar-link">コンポーネントのstate管理</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>開発の周辺ツール</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>ReactNative固有の機能</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>モダンなJavaScriptの記法</span><span class="arrow down"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="コンポーネントのライフサイクルメソッド"><a href="#コンポーネントのライフサイクルメソッド" aria-hidden="true" class="header-anchor">#</a> コンポーネントのライフサイクルメソッド</h1><h2 id="ゴール"><a href="#ゴール" aria-hidden="true" class="header-anchor">#</a> ゴール</h2><ul><li>ライフサイクルメソッドとはどんなものなのか理解する</li><li>主なライフサイクルメソッドの利用シーンを理解する</li></ul><h2 id="ライフサイクルメソッドとは"><a href="#ライフサイクルメソッドとは" aria-hidden="true" class="header-anchor">#</a> ライフサイクルメソッドとは</h2><ul><li>クラスで定義したコンポーネントで使える</li><li>renderメソッドが呼ばれる前後やstateが更新されたタイミング等に内部で勝手に呼ばれるメソッド</li></ul><h2 id="ライフサイクルメソッドの種類"><a href="#ライフサイクルメソッドの種類" aria-hidden="true" class="header-anchor">#</a> ライフサイクルメソッドの種類</h2><ul><li><p>コンポーネントの生成時に呼ばれるタイプ</p><ul><li>constructor</li><li>componentWillmount</li><li>componentDidMount</li></ul><pre class="language-js"><code><span class="token comment">// 初回描画時のみ一連のメソッドが順番に呼ばれる</span>
+<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">componentWillmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></li><li><p>コンポーネントの再描画時に呼ばれるタイプ</p><ul><li>componentWillReceiveProps</li><li>shouldComponentUpdate</li><li>componentWillUpdate</li><li>componentDidUpdate</li></ul><pre class="language-js"><code><span class="token comment">// 状態が更新される度に一連のメソッドが順番に呼ばれる</span>
+<span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">componentWillUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+↓
+<span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></li><li><p>コンポーネントの破棄時に呼ばれるタイプ</p><ul><li>componentWillUnmount</li></ul></li><li><p>注意：React v16.4から以下の3つはdeprecatedとなりv17.0で削除される</p><ul><li>componentWillmount</li><li>componentWillUpdate</li><li>componentWillReceiveProps</li></ul></li></ul><h2 id="主なライフサイクルメソッド"><a href="#主なライフサイクルメソッド" aria-hidden="true" class="header-anchor">#</a> 主なライフサイクルメソッド</h2><h3 id="constructor"><a href="#constructor" aria-hidden="true" class="header-anchor">#</a> constructor</h3><ul><li><p>コンポーネント初期化時に1度呼ばれる</p></li><li><p>stateの初期値の設定等を行う</p></li><li><p>最初にsuperに対して第一引数を渡しておく必要がある</p><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Sample</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">'Ozaki'</span><span class="token punctuation">,</span>
+      age<span class="token punctuation">:</span> <span class="token number">27</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></li></ul><h3 id="componentwillmount"><a href="#componentwillmount" aria-hidden="true" class="header-anchor">#</a> componentWillmount</h3><ul><li>初回のrenderメソッド呼び出し直前に呼ばれる</li><li>render前にstateを更新する必要がある場合はここで行う</li><li>deprecatedとなったので今後は<code>constructor</code>か<code>componentDidMount</code>で行うようにする</li></ul><h3 id="componentdidmount"><a href="#componentdidmount" aria-hidden="true" class="header-anchor">#</a> componentDidMount</h3><ul><li><p>初回のrenderメソッド呼び出し直後に呼ばれる</p></li><li><p>通信処理によるデータ取得やイベントのリスナーの設置等を行う</p><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Sample</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> users<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> users <span class="token operator">=</span> <span class="token function">someGetUsersMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></li></ul><h2 id="まとめ"><a href="#まとめ" aria-hidden="true" class="header-anchor">#</a> まとめ</h2><ul><li>ライフサイクルメソッドとはrender前後等の特定のタイミングで自動的に呼び出されるメソッドのこと</li><li><code>constructor</code>では主にstateの初期値を設定する</li><li><code>componentDidMount</code>では通信処理によるデータ取得等を行う</li></ul></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/vuepress-sample/create_component.html" class="prev">
+          Reactのコンポーネント
+        </a></span><span class="next"><a href="/vuepress-sample/state.html">
+          コンポーネントのstate管理
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/vuepress-sample/assets/js/10.7115ee24.js" defer></script><script src="/vuepress-sample/assets/js/app.76c236ad.js" defer></script>
+  </body>
+</html>
